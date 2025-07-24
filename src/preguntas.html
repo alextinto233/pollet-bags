@@ -164,6 +164,13 @@
             mobileMenu.classList.add('hidden');
         });
 
+        // Cierra el menú si se hace clic fuera de él
+        mobileMenu.addEventListener('click', (event) => {
+            if (event.target === mobileMenu) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
         // Asegurarse de que el menú esté cerrado al cargar la página (útil para la navegación hacia atrás)
         document.addEventListener('DOMContentLoaded', () => {
             if (!mobileMenu.classList.contains('hidden')) {
