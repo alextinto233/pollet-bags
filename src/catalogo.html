@@ -161,6 +161,13 @@
             mobileMenu.classList.add('hidden');
         });
 
+        // Asegurarse de que el menú esté cerrado al cargar la página (útil para la navegación hacia atrás)
+        document.addEventListener('DOMContentLoaded', () => {
+            if (!mobileMenu.classList.contains('hidden')) {
+                mobileMenu.classList.add('hidden');
+            }
+        });
+
         const products = [
             { 
                 id: 1, 
